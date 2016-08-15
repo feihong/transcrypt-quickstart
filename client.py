@@ -18,9 +18,17 @@ GREETINGS = [
 
 jq = window.jQuery
 
-jq('#content').text('Huzzah!')
 
-def on_click(evt):
+def plog(text):
+    return jq('<p>').text(text).appendTo('#output')
+
+
+def clear(evt):
+    jq('#output').empty()
+jq('button.clear').on('click', clear)
+
+
+def hello(evt):
     text = random.choice(GREETINGS)
-    jq('#content').text(text)
-jq('button.hello').on('click', on_click)
+    plog(text)
+jq('button.hello').on('click', hello)

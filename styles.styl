@@ -1,5 +1,41 @@
-#content
-  background-color palegoldenrod
-  padding 1em
+html
+  height 100%
+
+body
+  display flex
+  flex-direction column
+  height 100%
+
+header
+  padding 0 1em 1em 1em
+
+main
+  display flex
+  flex-direction row
+  flex 1
   margin-bottom 1em
-  border-radius 10px
+  // This allows #output to have correct overflow behavior in firefox
+  min-height 0
+
+.vbox
+  display flex
+  flex-direction column
+
+.hbox
+  display flex
+  flex-direction row
+
+#buttons
+  display flex
+  flex-direction column
+  margin-right 1em
+
+  button
+    margin-bottom 0.5em
+
+#output
+  flex 1
+  color lightgreen
+  background-color black
+  padding 1em
+  overflow-y scroll

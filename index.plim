@@ -10,12 +10,16 @@
   link rel='stylesheet' href='styles.styl'
 
 -def button(label, cls)
-  button.btn.btn-default class=cls = label
+  button.btn.btn-primary class=cls = label
 
-.container
+
+header
   h1 = title()
 
-  #content
-
-  .buttons
+main
+  #buttons.vbox
+    = button('Clear', 'clear')
     = button('Hello', 'hello')
+  #output
+    -for x in range(50)
+      p = x
