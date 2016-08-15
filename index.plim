@@ -4,7 +4,7 @@
   Transcrypt Quickstart
 
 -block extrascript
-  script src='__javascript__/client.js'
+  script src='client.py'
 
 -block extrastyle
   link rel='stylesheet' href='styles.styl'
