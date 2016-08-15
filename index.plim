@@ -20,6 +20,5 @@ main
   #buttons.vbox
     = button('Clear', 'clear')
     = button('Hello', 'hello')
+    = button('Generator function', 'generator')
   #output
-    -for x in range(50)
-      p = x
