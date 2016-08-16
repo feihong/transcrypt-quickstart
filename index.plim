@@ -12,7 +12,6 @@
 -def button(label, cls)
   button.btn.btn-primary class=cls = label
 
-
 header
   h1 = title()
 
@@ -21,4 +20,5 @@ main
     = button('Clear', 'clear')
     = button('Hello', 'hello')
     = button('Generator function', 'generator')
+    = button('Debugger', 'debugger')
   #output

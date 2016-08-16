@@ -51,5 +51,28 @@ def generator():
             yield i, i*i
     for x in fn(10):
         plog(x)
-
 jq('.generator').on('click', generator)
+
+
+# def fun_decorator(fn):
+#     def wrapper():
+#         print('Fun starts now!')
+#         fn()
+#         print('Aw, fun is done :-(')
+#     return wrapper
+#
+# @fun_decorator
+# def yay():
+#     print('Inside the yay function')
+
+
+def debug():
+    # Create a dictionary.
+    dic = dict(a=1, b=2, c=3)
+
+    # Start the JavaScript debugger.
+    __pragma__('js', 'debugger')
+
+    for k, v in dic.items():
+        plog('{} => {}'.format(k, v))
+jq('.debugger').on('click', debug)
