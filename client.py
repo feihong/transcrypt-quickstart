@@ -54,18 +54,6 @@ def generator():
 jq('.generator').on('click', generator)
 
 
-# def fun_decorator(fn):
-#     def wrapper():
-#         print('Fun starts now!')
-#         fn()
-#         print('Aw, fun is done :-(')
-#     return wrapper
-#
-# @fun_decorator
-# def yay():
-#     print('Inside the yay function')
-
-
 def debug():
     # Create a dictionary.
     dic = dict(a=1, b=2, c=3)
@@ -76,3 +64,21 @@ def debug():
     for k, v in dic.items():
         plog('{} => {}'.format(k, v))
 jq('.debugger').on('click', debug)
+
+
+def fun_decorator(fn):
+    plog('Inside fun_decorator')
+    def wrapper():
+        plog('Fun starts now!')
+        fn()
+        plog('Aw, fun is done :-(')
+    return wrapper
+
+@fun_decorator
+def yay():
+    plog('Inside the yay function')
+
+def decorator():
+    plog('This does not seem to work yet')
+    yay()
+jq('.decorator').on('click', decorator)

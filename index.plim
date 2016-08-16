@@ -21,4 +21,5 @@ main
     = button('Hello', 'hello')
     = button('Generator function', 'generator')
     = button('Debugger', 'debugger')
+    = button('Decorator', 'decorator')
   #output
